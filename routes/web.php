@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Content::class)->name('content');
+Route::get('/deposit', Deposit::class)->name('deposit');
+Route::get('/form-deposit', FormDeposit::class)->name('form-deposit');
